@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
-// import About from './components/About'
+import About from './components/About'
 
 function App() {
 
   const [theme, setTheme] = useState("light")
-
   const [alert, setAlert] = useState(null)
 
   const changeTheme = (newTheme) => {
@@ -41,6 +40,7 @@ function App() {
 
 
   const showAlert = (message, type) => {
+
     setAlert({
       msg: message,
       type: type
@@ -49,12 +49,12 @@ function App() {
     setTimeout(() => {
       setAlert(null)
     }, 2000)
+
   }
 
 
   return (
-    <>
-      {/* <Router> */}
+    <Router>
 
       <Navbar
         title="TextUtils"
@@ -70,14 +70,9 @@ function App() {
         </div>
       )}
 
-      <TextForm
-        heading="Enter the text"
-        showAlert={showAlert}
-      />
-
-      {/*
       <Routes>
 
+        {/* Home Page */}
         <Route
           path="/"
           element={
@@ -88,16 +83,15 @@ function App() {
           }
         />
 
+        {/* About Page */}
         <Route
           path="/about"
           element={<About />}
         />
 
       </Routes>
-      */}
 
-      {/* </Router> */}
-    </>
+    </Router>
   )
 }
 

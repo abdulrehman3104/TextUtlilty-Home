@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
 
@@ -32,7 +32,7 @@ export default function Navbar(props) {
                 ? "navbar-brand text-white"
                 : "navbar-brand text-dark"
             }
-            href="/TextUtlilty-Home/"
+            href="/"
           >
             {props.title}
           </a>
@@ -63,16 +63,14 @@ export default function Navbar(props) {
               <li className="nav-item">
                 <a
                   className={textClass}
-                  href="/TextUtlilty-Home/"
+                  href="/"
                 >
                   Home
                 </a>
               </li>
 
 
-              {/* About Us - temporarily disabled */}
-
-              {/*
+              {/* About Us */}
               <li className="nav-item">
                 <Link
                   className={textClass}
@@ -81,7 +79,6 @@ export default function Navbar(props) {
                   {props.aboutText}
                 </Link>
               </li>
-              */}
 
             </ul>
 
