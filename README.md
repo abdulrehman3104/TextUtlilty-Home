@@ -49,4 +49,8 @@ textUtils/
 │
 ├── package.json
 ├── README.md
+<<<<<<< HEAD
 └── .gitignore
+=======
+└── .gitignore
+>>>>>>> 4a7e280064fbe394f71e460727a91968be10fcc4
