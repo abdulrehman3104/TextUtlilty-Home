@@ -26,16 +26,16 @@ export default function Navbar(props) {
         <div className="container-fluid">
 
           {/* Website Name */}
-          <a
+          <button
             className={
               props.theme === "dark" || props.theme === "blue"
-                ? "navbar-brand text-white"
-                : "navbar-brand text-dark"
+                ? "navbar-brand text-white border-0 bg-transparent"
+                : "navbar-brand text-dark border-0 bg-transparent"
             }
-            href="#"
+            type="button"
           >
             {props.title}
-          </a>
+          </button>
 
 
           {/* Mobile Button */}
@@ -61,12 +61,12 @@ export default function Navbar(props) {
 
               {/* Home */}
               <li className="nav-item">
-                <a
-                  className={textClass}
-                  href="#"
+                <button
+                  className={`${textClass} border-0 bg-transparent`}
+                  type="button"
                 >
                   Home
-                </a>
+                </button>
               </li>
 
 
